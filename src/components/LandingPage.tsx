@@ -148,30 +148,30 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
   const soldPercentage = (currentLottery.soldTickets / currentLottery.totalTickets) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-black overflow-x-hidden">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+      <header className="bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800 sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2 animate-fade-in">
               <div className="relative">
-                <Home className="w-8 h-8 text-blue-600 animate-pulse" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-bounce"></div>
+                <Home className="w-8 h-8 text-cyan-400 animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-pink-500 rounded-full animate-bounce"></div>
               </div>
-              <span className="text-xl font-bold text-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
                 DreamHome Lottery
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <button
                 onClick={onSignIn}
-                className="text-gray-600 hover:text-blue-600 transition-all duration-300 hover:scale-105"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105"
               >
                 Sign In
               </button>
               <button
                 onClick={onSignUp}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-cyan-500 to-pink-500 text-white px-6 py-2 rounded-full hover:from-cyan-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
               </button>
@@ -181,23 +181,23 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </header>
 
       {/* Trust Indicators */}
-      <div className="bg-white/90 backdrop-blur-sm border-b border-blue-100">
+      <div className="bg-gray-800/90 backdrop-blur-sm border-b border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
+          <div className="flex items-center justify-center space-x-8 text-sm text-gray-300">
             <div className="flex items-center space-x-2 animate-slide-in-left">
-              <Shield className="w-4 h-4 text-green-500 animate-pulse" />
+              <Shield className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>Secure & Licensed</span>
             </div>
             <div className="flex items-center space-x-2 animate-slide-in-up">
-              <Lock className="w-4 h-4 text-green-500 animate-pulse" />
+              <Lock className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>Encrypted Payments</span>
             </div>
             <div className="flex items-center space-x-2 animate-slide-in-down">
-              <CheckCircle className="w-4 h-4 text-green-500 animate-pulse" />
+              <CheckCircle className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>Verified Winners</span>
             </div>
             <div className="flex items-center space-x-2 animate-slide-in-right">
-              <CreditCard className="w-4 h-4 text-green-500 animate-pulse" />
+              <CreditCard className="w-4 h-4 text-emerald-400 animate-pulse" />
               <span>Mobile Payment Ready</span>
             </div>
           </div>
@@ -207,13 +207,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/30 via-purple-900/30 to-pink-900/30"></div>
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentImageIndex ? 'opacity-30' : 'opacity-0'
+                index === currentImageIndex ? 'opacity-20' : 'opacity-0'
               }`}
             >
               <img
@@ -227,20 +227,20 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
 
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 animate-float">
-          <div className="w-16 h-16 bg-yellow-400/20 rounded-full blur-xl"></div>
+          <div className="w-16 h-16 bg-cyan-400/30 rounded-full blur-xl"></div>
         </div>
         <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-24 h-24 bg-blue-400/20 rounded-full blur-xl"></div>
+          <div className="w-24 h-24 bg-pink-400/30 rounded-full blur-xl"></div>
         </div>
         <div className="absolute bottom-40 left-20 animate-float-slow">
-          <div className="w-20 h-20 bg-purple-400/20 rounded-full blur-xl"></div>
+          <div className="w-20 h-20 bg-purple-400/30 rounded-full blur-xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up">
               Win Your{' '}
-              <span className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-400 bg-clip-text text-transparent animate-gradient">
                 Dream Home
               </span>
             </h1>
@@ -253,7 +253,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-more-delayed">
               <button
                 onClick={onSignUp}
-                className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-yellow-500/25 flex items-center space-x-2"
+                className="group bg-gradient-to-r from-cyan-500 to-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-cyan-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110 shadow-2xl hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Start Winning Today</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -261,7 +261,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
               
               <button
                 onClick={() => setIsVideoPlaying(true)}
-                className="group bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/30 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+                className="group bg-gray-800/40 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 border border-gray-600/30"
               >
                 <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 <span>Watch How It Works</span>
@@ -276,12 +276,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
               return (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up"
+                  className="bg-gray-800/30 backdrop-blur-md rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 animate-fade-in-up border border-gray-700/30"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Icon className="w-8 h-8 text-yellow-400 mx-auto mb-3 animate-bounce" />
+                  <Icon className="w-8 h-8 text-cyan-400 mx-auto mb-3 animate-bounce" />
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-white/80 text-sm">{stat.label}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               );
             })}
@@ -319,18 +319,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       )}
 
       {/* Current Lottery Showcase */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-              Current <span className="text-blue-600">Lottery</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
+              Current <span className="text-cyan-400">Lottery</span>
             </h2>
-            <p className="text-xl text-gray-600 animate-fade-in-up-delayed">
+            <p className="text-xl text-gray-300 animate-fade-in-up-delayed">
               Your chance to win starts here
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 animate-fade-in-up">
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 animate-fade-in-up border border-gray-700">
             <div className="md:flex">
               <div className="md:w-1/2 relative overflow-hidden">
                 <img
@@ -341,42 +341,42 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="flex items-center space-x-2 mb-2">
-                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
                       Active Draw
                     </span>
-                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {currentLottery.soldTickets} tickets sold
                     </span>
                   </div>
                 </div>
               </div>
               <div className="md:w-1/2 p-8 md:p-12">
-                <h3 className="text-3xl font-bold text-gray-800 mb-4 animate-slide-in-right">
+                <h3 className="text-3xl font-bold text-white mb-4 animate-slide-in-right">
                   {currentLottery.title}
                 </h3>
-                <p className="text-gray-600 mb-6 animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
+                <p className="text-gray-300 mb-6 animate-slide-in-right" style={{ animationDelay: '0.1s' }}>
                   {currentLottery.description}
                 </p>
                 
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div className="text-center transform hover:scale-105 transition-transform animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                    <div className="text-3xl font-bold text-blue-600 mb-1">{currentLottery.prizeValue}</div>
-                    <div className="text-sm text-gray-500">Prize Value</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-1">{currentLottery.prizeValue}</div>
+                    <div className="text-sm text-gray-400">Prize Value</div>
                   </div>
                   <div className="text-center transform hover:scale-105 transition-transform animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
-                    <div className="text-3xl font-bold text-green-600">${currentLottery.ticketPrice}</div>
-                    <div className="text-sm text-gray-500">Per Ticket</div>
+                    <div className="text-3xl font-bold text-emerald-400">${currentLottery.ticketPrice}</div>
+                    <div className="text-sm text-gray-400">Per Ticket</div>
                   </div>
                 </div>
 
                 <div className="mb-6 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
-                  <div className="flex justify-between text-sm text-gray-600 mb-2">
+                  <div className="flex justify-between text-sm text-gray-300 mb-2">
                     <span>Tickets Sold</span>
                     <span>{currentLottery.soldTickets} / {currentLottery.totalTickets}</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                  <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
                     <div
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 h-4 rounded-full transition-all duration-1000 relative overflow-hidden"
+                      className="bg-gradient-to-r from-cyan-500 to-pink-500 h-4 rounded-full transition-all duration-1000 relative overflow-hidden"
                       style={{ width: `${soldPercentage}%` }}
                     >
                       <div className="absolute inset-0 bg-white/30 animate-shimmer"></div>
@@ -385,15 +385,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                 </div>
 
                 <div className="flex items-center space-x-4 mb-8 animate-slide-in-right" style={{ animationDelay: '0.5s' }}>
-                  <Calendar className="w-5 h-5 text-gray-400" />
-                  <span className="text-gray-600">
+                  <Calendar className="w-5 h-5 text-gray-300" />
+                  <span className="text-gray-300">
                     Draw Date: <strong>{new Date(currentLottery.drawDate).toLocaleDateString()}</strong>
                   </span>
                 </div>
 
                 <button
                   onClick={onSignUp}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-2xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl animate-slide-in-right"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-pink-500 text-white py-4 rounded-2xl font-bold text-lg hover:from-cyan-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 animate-slide-in-right"
                   style={{ animationDelay: '0.6s' }}
                 >
                   Buy Tickets Now
@@ -405,13 +405,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* Upcoming Lotteries */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-              Upcoming <span className="text-purple-600">Lotteries</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
+              Upcoming <span className="text-pink-400">Lotteries</span>
             </h2>
-            <p className="text-xl text-gray-600 animate-fade-in-up-delayed">
+            <p className="text-xl text-gray-300 animate-fade-in-up-delayed">
               More amazing prizes coming soon
             </p>
           </div>
@@ -420,7 +420,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
             {upcomingLotteries.map((lottery, index) => (
               <div
                 key={lottery.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up group"
+                className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up group border border-gray-700"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -431,7 +431,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
-                    <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    <span className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
                       Coming Soon
                     </span>
                   </div>
@@ -440,18 +440,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {lottery.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{lottery.description}</p>
+                  <p className="text-gray-300 mb-4">{lottery.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Calendar className="w-4 h-4 text-gray-400" />
-                      <span className="text-sm text-gray-600">
+                      <Calendar className="w-4 h-4 text-gray-300" />
+                      <span className="text-sm text-gray-300">
                         {new Date(lottery.drawDate).toLocaleDateString()}
                       </span>
                     </div>
-                    <span className="text-lg font-semibold text-green-600">${lottery.ticketPrice}</span>
+                    <span className="text-lg font-semibold text-emerald-400">${lottery.ticketPrice}</span>
                   </div>
                 </div>
               </div>
@@ -461,13 +461,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* Recent Winners */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-              Recent <span className="text-yellow-600">Winners</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
+              Recent <span className="text-yellow-400">Winners</span>
             </h2>
-            <p className="text-xl text-gray-600 animate-fade-in-up-delayed">
+            <p className="text-xl text-gray-300 animate-fade-in-up-delayed">
               Real people, real wins, real dreams come true
             </p>
           </div>
@@ -476,21 +476,21 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
             {recentWinners.map((winner, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-yellow-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-fade-in-up group"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-yellow-500/30 hover:shadow-xl hover:shadow-yellow-500/20 transition-all duration-300 transform hover:scale-105 animate-fade-in-up group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="relative">
-                    <Trophy className="w-8 h-8 text-yellow-500 group-hover:animate-bounce" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                    <Trophy className="w-8 h-8 text-yellow-400 group-hover:animate-bounce" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full animate-ping"></div>
                   </div>
                   <div>
-                    <div className="font-bold text-gray-800">{winner.name}</div>
-                    <div className="text-sm text-gray-600">{winner.date}</div>
+                    <div className="font-bold text-white">{winner.name}</div>
+                    <div className="text-sm text-gray-300">{winner.date}</div>
                   </div>
                 </div>
-                <p className="text-gray-700 mb-2 font-semibold">{winner.prize}</p>
-                <p className="text-sm text-gray-500 font-mono">Ticket: {winner.ticketHash}</p>
+                <p className="text-gray-200 mb-2 font-semibold">{winner.prize}</p>
+                <p className="text-sm text-gray-400 font-mono">Ticket: {winner.ticketHash}</p>
               </div>
             ))}
           </div>
@@ -498,21 +498,21 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* Live Activity Feed */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in-up">
-              Live <span className="text-blue-600">Activity</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
+              Live <span className="text-cyan-400">Activity</span>
             </h2>
-            <p className="text-xl text-gray-600 animate-fade-in-up-delayed">
+            <p className="text-xl text-gray-300 animate-fade-in-up-delayed">
               See who's joining the excitement right now
             </p>
           </div>
           
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fade-in-up">
-            <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="bg-gray-900 rounded-2xl shadow-xl overflow-hidden animate-fade-in-up border border-gray-700">
+            <div className="p-6 bg-gradient-to-r from-cyan-600 to-pink-600 text-white">
               <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
                 <span className="font-semibold">Live Participants</span>
               </div>
             </div>
@@ -521,18 +521,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                 {recentParticipants.map((participant, index) => (
                   <div
                     key={index}
-                    className="bg-gray-50 p-4 rounded-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 animate-slide-in-up"
+                    className="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 animate-slide-in-up border border-gray-700"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-center space-x-2 mb-2">
-                      <Users className="w-4 h-4 text-blue-500" />
-                      <span className="font-semibold text-gray-800">{participant.maskedName}</span>
-                      <Zap className="w-3 h-3 text-yellow-500 animate-pulse" />
+                      <Users className="w-4 h-4 text-cyan-400" />
+                      <span className="font-semibold text-white">{participant.maskedName}</span>
+                      <Zap className="w-3 h-3 text-yellow-400 animate-pulse" />
                     </div>
-                    <p className="text-sm text-gray-600">{participant.maskedPhone}</p>
+                    <p className="text-sm text-gray-300">{participant.maskedPhone}</p>
                     <div className="flex items-center justify-between mt-2">
-                      <p className="text-sm text-blue-600 font-semibold">{participant.ticketCount} tickets</p>
-                      <p className="text-xs text-gray-500">{participant.joinDate}</p>
+                      <p className="text-sm text-cyan-400 font-semibold">{participant.ticketCount} tickets</p>
+                      <p className="text-xs text-gray-400">{participant.joinDate}</p>
                     </div>
                   </div>
                 ))}
@@ -543,13 +543,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
               What Our <span className="text-pink-600">Winners</span> Say
             </h2>
-            <p className="text-xl text-gray-600 animate-fade-in-up-delayed">
+            <p className="text-xl text-gray-300 animate-fade-in-up-delayed">
               Hear from real winners who changed their lives
             </p>
           </div>
@@ -558,7 +558,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up group"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up group border border-gray-700"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
@@ -568,7 +568,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                     className="w-12 h-12 rounded-full object-cover mr-3 group-hover:scale-110 transition-transform duration-300"
                   />
                   <div>
-                    <div className="font-semibold text-gray-800">{testimonial.name}</div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="flex items-center">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
@@ -576,7 +576,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600 italic">"{testimonial.text}"</p>
+                <p className="text-gray-300 italic">"{testimonial.text}"</p>
                 <Heart className="w-5 h-5 text-pink-500 mt-3 group-hover:animate-pulse" />
               </div>
             ))}
@@ -585,11 +585,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 bg-yellow-400/20 rounded-full animate-float-delayed"></div>
+          <div className="absolute top-40 right-20 w-16 h-16 bg-cyan-400/20 rounded-full animate-float-delayed"></div>
           <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-400/20 rounded-full animate-float-slow"></div>
         </div>
         
@@ -603,14 +603,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-more-delayed">
             <button
               onClick={onSignUp}
-              className="group bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 shadow-2xl flex items-center space-x-2"
+              className="group bg-white text-cyan-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 shadow-2xl flex items-center space-x-2"
             >
               <span>Start Your Journey</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => setIsVideoPlaying(true)}
-              className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+              className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
               <span>Watch Success Stories</span>
@@ -620,31 +620,31 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-black text-white py-16 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="animate-fade-in-up">
               <div className="flex items-center space-x-2 mb-6">
-                <Home className="w-8 h-8 text-blue-400" />
+                <Home className="w-8 h-8 text-cyan-400" />
                 <span className="text-xl font-bold">DreamHome Lottery</span>
               </div>
               <p className="text-gray-400 mb-4">
                 Your trusted platform for winning luxury properties through secure, transparent lotteries.
               </p>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors cursor-pointer">
+                <div className="w-10 h-10 bg-cyan-600 rounded-full flex items-center justify-center hover:bg-cyan-700 transition-colors cursor-pointer">
                   <span className="text-sm font-bold">f</span>
                 </div>
                 <div className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors cursor-pointer">
                   <span className="text-sm font-bold">@</span>
                 </div>
-                <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors cursor-pointer">
+                <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-colors cursor-pointer">
                   <span className="text-sm font-bold">t</span>
                 </div>
               </div>
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <h4 className="font-semibold mb-4 text-blue-400">Lotteries</h4>
+              <h4 className="font-semibold mb-4 text-cyan-400">Lotteries</h4>
               <ul className="space-y-2 text-gray-400">
                 <li className="hover:text-white transition-colors cursor-pointer">Active Draws</li>
                 <li className="hover:text-white transition-colors cursor-pointer">Upcoming</li>
@@ -653,7 +653,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
               </ul>
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h4 className="font-semibold mb-4 text-blue-400">Support</h4>
+              <h4 className="font-semibold mb-4 text-cyan-400">Support</h4>
               <ul className="space-y-2 text-gray-400">
                 <li className="hover:text-white transition-colors cursor-pointer">How It Works</li>
                 <li className="hover:text-white transition-colors cursor-pointer">FAQ</li>
@@ -662,7 +662,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
               </ul>
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <h4 className="font-semibold mb-4 text-blue-400">Legal</h4>
+              <h4 className="font-semibold mb-4 text-cyan-400">Legal</h4>
               <ul className="space-y-2 text-gray-400">
                 <li className="hover:text-white transition-colors cursor-pointer">Terms of Service</li>
                 <li className="hover:text-white transition-colors cursor-pointer">Privacy Policy</li>
@@ -671,7 +671,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSignUp, onSignIn, onSocialS
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <div className="border-t border-gray-900 mt-12 pt-8 text-center text-gray-400">
             <p>&copy; 2025 DreamHome Lottery. All rights reserved. Licensed and regulated.</p>
           </div>
         </div>
